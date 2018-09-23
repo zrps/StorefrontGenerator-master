@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="navbar">
+            <a href="#home">Home</a>
+            <a href="">1</a>
+        </div>
+        <ul>
+
+        </ul>
+        <script>
+            var products = ["Shirt", "Pants", "Watches", "Hats", "Phones"];
+            var ul = document.querySelector("ul"); /*Finds first instance of ul, not all instances of ul*/
+            for (var i = 0; i < products.length; ++i){
+                var cur_product = products[i]; /*Selects current product*/
+                var toList = document.createElement("li");
+                toList.textContent = cur_product;
+                ul.appendChild(toList);
+
+            }
+        </script>
+    </body>
+</html>
