@@ -1,16 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html>  
+    <style>
+        ul#nav{
+            overflow: hidden;
+            background-color: #999;
+        }
+        #nav li{
+            float: left;
+        }
+        #nav li a{
+            display: block;
+            padding: 10px 20px;
+            color: black;
+            text-align: center;
+        }
+    </style>
     <body>
-        <div id="navbar">
-            <a href="#home">Home</a>
-            <a href="">1</a>
-        </div>
-        <ul>
+        <ul id="nav">
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="">1</a>
+            </li>
+            <li>
+                <a href="">2</a>
+            </li>
+        </ul>
+        <ul id="item-list">
+            
+
 
         </ul>
         <script>
+            /*var testObj = {name: "Zach", age: 23, state: "Oregon" };
+            var testJSON = JSON.stringify(testObj);
+            window.location = testJSON;*/
+
+            //arrayName.push("item to add");
+            
             var products = ["Shirt", "Pants", "Watches", "Hats", "Phones"];
-            var ul = document.querySelector("ul"); /*Finds first instance of ul, not all instances of ul*/
+            var price = ["$1","$2","$40","$10","15"]
+            var ul = document.querySelector("#item-list"); /*Finds first instance of ul, not all instances of ul*/
             for (var i = 0; i < products.length; ++i){
                 var cur_product = products[i]; /*Selects current product*/
                 var toList = document.createElement("li");
