@@ -1,32 +1,15 @@
 <!DOCTYPE html>
 <html>  
     <style>
-        ul#nav{
-            overflow: hidden;
-            background-color: #999;
-        }
-        #nav li{
-            float: left;
-        }
-        #nav li a{
-            display: block;
-            padding: 10px 20px;
-            color: black;
-            text-align: center;
-        }
+
     </style>
+    <head>
+            <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
     <body>
-        <ul id="nav">
-            <li>
-                <a href="#home">Home</a>
-            </li>
-            <li>
-                <a href="">1</a>
-            </li>
-            <li>
-                <a href="">2</a>
-            </li>
-        </ul>
+        <div id="nav-bar">
+            <div w3-include-html="navbar.html"></div>
+        </div>
         <ul id="item-list">
             
 
@@ -39,6 +22,10 @@
 
             //arrayName.push("item to add");
             
+            /*$(function(){
+                $("#nav-bar").load("navbar.html");
+            });*/
+
             var products = ["Shirt", "Pants", "Watches", "Hats", "Phones"];
             var price = ["$1","$2","$40","$10","15"]
             var ul = document.querySelector("#item-list"); /*Finds first instance of ul, not all instances of ul*/
